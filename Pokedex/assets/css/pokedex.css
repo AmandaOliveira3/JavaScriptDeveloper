@@ -20,7 +20,7 @@ ul.pokemons {
 ul.pokemons li img {
     max-width: 100%;
     border-style: none;
-    height: 70px;
+    height: 60px;
     align-self: flex-end;
 }
 
@@ -50,7 +50,7 @@ ul.pokemons li img {
     list-style: none;
 }
 
-.pokemon .detail .types .type{
+.type{
     color: #fff;
     padding: .25rem .5rem;
     margin: .25rem;
@@ -156,4 +156,8 @@ ul.pokemons li img {
     border: none;
     border-radius: 1rem;
     cursor: pointer;
+}
+
+.experience{
+    font-size: 0.6rem;
 }
