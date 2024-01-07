@@ -1,0 +1,53 @@
+//foreach- é uma forma reduzida de percorrer uma lista 
+
+//manipulação de listas 
+
+
+const lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+lista.forEach((value, i, listRef) => {
+    console.log(value, i, listRef)
+})
+
+
+
+//filter - recebe uma função que retorna um boolean
+const listaDeNumerosPares = lista.filter((element) => {
+    return (element % 2 === 0)
+})
+console.log(listaDeNumerosPares)
+
+//Map
+
+class Pessoa {
+    constructor(name) {
+        this.name = name
+    }
+}
+
+const listaPessoa = [new Pessoa('Renan'), new Pessoa('João'), new Pessoa('Pedro'), new Pessoa('Maria')]
+
+const listaNomes = listaPessoa.map((element) => element.name)
+
+console.log(listaNomes)
+
+// reduce
+
+const listaNumero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const somaNumero = listaNumero.reduce((previous, current) => {
+    return previous + current
+}, 0)
+
+console.log(somaNumero)
+
+console.log(listaNumero.join('/'))
+
+const nomes = [{ nome: 'Armin' }, { nome: 'Amanda' }, { nome: 'Andressa' }, { nome: 'Vitor' }]
+
+console.log(
+    nomes.map(e => e.nome)
+        .filter((e) => e.startsWith('A'))
+        .join(';')
+)
+//console.log( nomes.map((e) => e.nome).join(';'))
